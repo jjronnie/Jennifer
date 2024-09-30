@@ -532,7 +532,7 @@ footer {
 .page-banner {
     position: relative;
     height: 480px; /* Set height for the banner */
-    background-image: url(/img/honey.jpg); /* Background image */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/honey.jpg"); /* Background image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     display: flex; /* Use flexbox for centering text */
