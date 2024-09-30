@@ -85,12 +85,16 @@ nav ul li a:hover::after {
 .hero-banner {
     position: relative;
     height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('img/anti.jpg');
+
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(/img/anti.jpg); /* Set image as background */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center vertically */
 }
+
+
 
 /* Container for text, button, and search */
 .hero-text {
@@ -821,67 +825,74 @@ h2{
 }
 
 
+/* Media Queries for Tablets and Phones */
 
-
-
-
-
-
-
-
-
-
-
-
-/* Media Queries for Responsive Design */
-
-/* Tablets (Landscape) */
-@media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-text h2 {
-        font-size: 36px; /* Reduce size for smaller screens */
-    }
-
-    .hero-text .btn {
-        padding: 10px 20px; /* Adjust button size */
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 products per row on tablets */
-    }
-
-    .product-filters {
-        max-width: 80%; /* Adjust width on tablets */
-    }
-}
-
-/* Phones */
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
-    .hero-text h2 {
-        font-size: 28px; /* Further reduce size for mobile */
+    .product-details {
+        flex-direction: column; /* Stack image and product info vertically */
+        align-items: center; /* Center items */
+        width: 90%; /* Use more width on smaller screens */
     }
 
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row on phones */
+    .product-info {
+        max-width: 100%; /* Full width for product info */
+        padding: 10px; /* Reduce padding */
     }
 
-    .product-filters {
-        max-width: 95%; /* Max width for mobile */
+    .product-info h2 {
+        font-size: 1.8rem; /* Adjust heading size */
     }
 
-    form {
-        flex-direction: column; /* Stack form elements */
+    .product-info .product-price {
+        font-size: 1.3rem; /* Adjust price size */
     }
 
-    button {
-        padding: 10px; /* Adjust button size for mobile */
+    .product-specifications {
+        width: 90%; /* Use more width on smaller screens */
     }
 }
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+    .product-details {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        width: 100%; /* Full width */
+    }
+
+    .product-image img {
+        max-width: 100%; /* Full width for image */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .product-info {
+        padding: 5px; /* Reduce padding on smaller screens */
+        text-align: center; /* Center align text for smaller screens */
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .product-info .product-price {
+        font-size: 1.2rem; /* Adjust price size */
+    }
+
+    .product-specifications {
+        width: 100%; /* Full width for specifications */
+    }
+
+    .product-specifications ul li {
+        padding: 8px; /* Reduce padding */
+    }
+}
+
+
+
+
+
+
+
+
+
