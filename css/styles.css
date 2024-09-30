@@ -65,22 +65,7 @@ nav ul li a {
     padding: 10px 15px; /* Consistent padding */
 }
 
-nav ul li a::after {
-    content: ''; /* Creates a pseudo-element */
-    position: absolute; /* Positioning it relative to the link */
-    left: 0; /* Align to the left */
-    bottom: -5px; /* Position just below the link */
-    width: 100%; /* Full width of the link */
-    height: 3px; /* Thickness of the underline */
-    background-color: #0056b3; /* Color of the underline */
-    transform: scaleX(0); /* Initially hide the underline */
-    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
-}
 
-/* On hover, scale the underline */
-nav ul li a:hover::after {
-    transform: scaleX(1); /* Show the underline */
-}
 /* Hero Banner Styles */
 .hero-banner {
     position: relative;
