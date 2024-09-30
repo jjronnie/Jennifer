@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #0A4D3C;
 }
 
 h1, h2, h3 {
@@ -48,6 +48,18 @@ body {
     font-size: 22px;
     color: #0056b3;
 }
+/* Logo Image Styling */
+.logo {
+    display: flex; /* Use flexbox to align the image and text */
+    align-items: center; /* Vertically align the image with the heading */
+}
+
+.logo-image {
+    width: 50px; /* Set width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the logo and the heading */
+}
+
 
 nav ul {
     display: flex;
@@ -64,6 +76,29 @@ nav ul li a {
     position: relative; /* Position relative for the pseudo-element */
     padding: 10px 15px; /* Consistent padding */
 }
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none; /* Remove underline by default */
+    color: #0056b3; /* Default link color */
+    font-weight: bold; /* Make the links bold */
+    position: relative; /* Required for the underline effect */
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Thickness of the underline */
+    background-color: #0056b3; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition on hover */
+}
+
+
+
+
 
 
 /* Hero Banner Styles */
@@ -82,15 +117,15 @@ nav ul li a {
 
 /* Container for text, button, and search */
 .hero-text {
-    width: 30%; /* Set width to 30% */
+    
     color: white; /* Text color */
     text-align: left; /* Align text to the left */
-    padding-left: 250px; /* Optional: Add padding for spacing */
+    padding-left: 180px; /* Optional: Add padding for spacing */
 }
 
 .hero-text h2 {
     font-size: 48px; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
+    margin-bottom: 50px; /* Space below heading */
 }
 
 .hero-text .btn {
@@ -101,10 +136,11 @@ nav ul li a {
     border-radius: 4px; /* Rounded corners */
     margin-bottom: 10px; /* Space below button */
     display: inline-block; /* Make it inline block */
+    right:  30%;
 }
 
 .hero-text .btn:hover {
-    background-color: #e68900; /* Button hover color */
+    background-color: blue; /* Button hover color */
 }
 
 .search-bar {
@@ -115,7 +151,7 @@ nav ul li a {
 
 .search-bar input {
     padding: 10px; /* Padding inside the input */
-    border: 1px solid #ddd; /* Border for the input */
+   
     border-radius: 4px 0 0 4px; /* Rounded corners on the left */
     width: 70%; /* Width of the input field */
 }
@@ -127,10 +163,11 @@ nav ul li a {
     color: white; /* Button text color */
     border-radius: 0 4px 4px 0; /* Rounded corners on right */
     cursor: pointer; /* Cursor on hover */
+    margin: 5px;
 }
 
 .search-bar button:hover {
-    background-color: #003d82; /* Button hover color */
+    background-color: goldenrod; /* Button hover color */
 }
 
 
@@ -468,9 +505,13 @@ footer p {
 /* Footer Styles */
 footer {
     background-color: #f4f4f4; /* Background color for footer */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../img/footer-bg.png");
     padding: 40px 20px; /* Padding around footer */
     text-align: center; /* Center align text */
-    color: #333; /* Text color */
+    margin-top: 20px;
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    position: relative;
 }
 
 .footer-container {
@@ -517,7 +558,7 @@ footer {
 .page-banner {
     position: relative;
     height: 480px; /* Set height for the banner */
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/honey.jpg"); /* Background image */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/home-products-bg.jpg"); /* Background image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     display: flex; /* Use flexbox for centering text */
@@ -835,6 +876,7 @@ h2{
     .product-specifications {
         width: 90%; /* Use more width on smaller screens */
     }
+   
 }
 
 /* Phones (480px and below) */

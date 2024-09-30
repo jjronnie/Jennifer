@@ -43,3 +43,25 @@ if (document.title !== "Home") { // Replace "Home" with the actual title of your
     setInterval(autoSlide, 5000); // Change slide every 5 seconds
 
 
+
+    
+   // Get the current page's file name (e.g., "contact.html")
+const currentPage = window.location.pathname.split("/").pop();
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Loop through the links to find the matching page
+navLinks.forEach(link => {
+    if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active'); // Add 'active' class to the matching link
+    }
+});
+
+navLinks.forEach(link => {
+    if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active'); // Add 'active' class
+        console.log(link); // Log the link to check if it's working
+    }
+});
+
