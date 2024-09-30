@@ -1,0 +1,887 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+a:hover {
+    color: #003d82;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Adjust margin to prevent content from hiding behind the fixed header */
+body {
+    padding-top: 80px; /* Adjust based on the header height */
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #0056b3;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    padding-right: 25px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    padding: 10px ;
+}
+/* Navigation Links Hover Effect */
+nav ul li a {
+    position: relative; /* Position relative for the pseudo-element */
+    padding: 10px 15px; /* Consistent padding */
+}
+
+nav ul li a::after {
+    content: ''; /* Creates a pseudo-element */
+    position: absolute; /* Positioning it relative to the link */
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position just below the link */
+    width: 100%; /* Full width of the link */
+    height: 3px; /* Thickness of the underline */
+    background-color: #0056b3; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* On hover, scale the underline */
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Show the underline */
+}
+/* Hero Banner Styles */
+.hero-banner {
+    position: relative;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(/img/anti.jpg); /* Set image as background */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
+}
+
+/* Container for text, button, and search */
+.hero-text {
+    width: 30%; /* Set width to 30% */
+    color: white; /* Text color */
+    text-align: left; /* Align text to the left */
+    padding-left: 250px; /* Optional: Add padding for spacing */
+}
+
+.hero-text h2 {
+    font-size: 48px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.hero-text .btn {
+    background-color: #ff9800; /* Button background color */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Button padding */
+    font-size: 18px; /* Button font size */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below button */
+    display: inline-block; /* Make it inline block */
+}
+
+.hero-text .btn:hover {
+    background-color: #e68900; /* Button hover color */
+}
+
+.search-bar {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    margin-top: 10px; /* Space above search bar */
+}
+
+.search-bar input {
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ddd; /* Border for the input */
+    border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+    width: 70%; /* Width of the input field */
+}
+
+.search-bar button {
+    padding: 10px 15px; /* Padding for the button */
+    border: 1px solid #0056b3; /* Border to match button */
+    background-color: #0056b3; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 0 4px 4px 0; /* Rounded corners on right */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.search-bar button:hover {
+    background-color: #003d82; /* Button hover color */
+}
+
+
+
+/* Main Sections */
+section {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Featured Products */
+.featured-products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjusted to 4 products per row */
+    gap: 20px;
+}
+.featured-products h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.product {
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d82;
+}
+
+/* FAQs Styles */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+/* Cart Styles */
+.shopping-cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.shopping-cart th, .shopping-cart td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.cart-total {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    color: #333;
+}
+/* Featured Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    gap: 20px; /* Space between products */
+}
+
+.product {
+    background-color: wheat;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%; /* Ensures images fit within the product container */
+    height: auto;
+}
+
+/* Ensure the same grid style for products on the home page */
+.featured-products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    gap: 20px;
+}
+/* Product Filters Styles */
+.product-filters {
+    max-width: 60%; /* Limit width to 60% */
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Add padding */
+}
+
+.product-filters form {
+    display: flex;
+    flex-wrap: wrap; /* Allows the filters to wrap to the next line if needed */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 10px; /* Space between elements */
+}
+
+.product-filters label {
+    font-weight: bold; /* Make labels bold */
+    flex: 1; /* Allow labels to stretch */
+}
+
+.product-filters select {
+    flex: 2; /* Allow selects to stretch more than labels */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-filters button {
+    flex: 1; /* Make button stretch */
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-filters button:hover {
+    background-color: #003d82;
+}
+
+/* Why Choose Us Styles */
+.why-choose-us {
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    margin-top: 20px; /* Add some space above cards */
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px; /* Set a fixed width for the cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.card-content {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #0056b3; /* Icon color */
+}
+/* Hover Effect */
+.card:hover {
+    background-color: goldenrod; /* Change background to Golden Rod on hover */
+    color: white; /* Optional: Change text color for better contrast */
+}
+
+.card-content {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #0056b3; /* Icon color */
+}
+
+
+/* Popular Categories Styles */
+.popular-categories {
+    text-align: center;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    margin-top: 20px; /* Add some space above cards */
+}
+
+.category-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Set a fixed width for the cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Category Cards */
+.category-card:hover {
+    background-color: goldenrod; /* Change background to Golden Rod on hover */
+    color: white; /* Optional: Change text color for better contrast */
+}
+
+.category-content {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #0056b3; /* Icon color */
+}
+
+/* Testimonials Styles */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center; /* Center testimonials */
+    gap: 20px; /* Space between testimonials */
+    margin-top: 20px; /* Add some space above testimonials */
+}
+
+.testimonial {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px; /* Set a fixed width for the testimonial card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+    width: 60px; /* Fixed width for the image */
+    height: 60px; /* Fixed height for the image */
+    border-radius: 50%; /* Make image circular */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.customer-name {
+    font-weight: bold; /* Make the name bold */
+    margin-top: 10px; /* Space above the name */
+}
+
+/* Newsletter Styles */
+.newsletter {
+    background-color: #0056b3; /* Background color */
+    color: white; /* Text color */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center align text */
+    max-width: 70%; /* Max width to 70% of the container */
+    margin: 0 auto; /* Center the section horizontally */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.newsletter h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 28px; /* Font size for the heading */
+    color: #ddd;
+}
+
+.newsletter form {
+    display: flex; /* Use flexbox for form layout */
+    justify-content: center; /* Center align the form elements */
+    gap: 10px; /* Space between input and button */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px; /* Padding inside the input field */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    width: 300px; /* Width of the input field */
+    font-size: 16px; /* Font size */
+}
+
+.newsletter button {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #ff9800; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.newsletter button:hover {
+    background-color: #e68900; /* Change background color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f4f4f4; /* Background color for footer */
+    padding: 40px 20px; /* Padding around footer */
+    text-align: center; /* Center align text */
+    color: #333; /* Text color */
+}
+
+.footer-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space elements evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px; /* Space below the footer content */
+}
+
+.footer-links, .footer-contact, .footer-social {
+    width: 30%; /* Each column takes 30% of the width */
+    min-width: 200px; /* Minimum width for responsiveness */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links ul li {
+    margin: 5px 0; /* Space between links */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0056b3; /* Link color */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-social a {
+    margin: 0 10px; /* Space between social icons */
+    color: #0056b3; /* Color for social icons */
+    font-size: 24px; /* Size for social icons */
+}
+
+.footer-social a:hover {
+    color: #003d82; /* Darker color on hover */
+}
+
+/* Page Banner Styles */
+.page-banner {
+    position: relative;
+    height: 480px; /* Set height for the banner */
+    background-image: url(/img/honey.jpg); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    display: flex; /* Use flexbox for centering text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+}
+
+.page-banner h1 {
+    font-size: 48px; /* Font size for the heading */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for text */
+    padding: 20px; /* Padding around text */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* About Container Styles */
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px; /* Add margin */
+}
+
+/* Card Styles */
+.about-card {
+    background-color: whitesmoke; /* Background color for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    width: 30%; /* Set width of each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Hover Effect */
+.about-card:hover {
+    background-color: goldenrod; /* Change background to Golden Rod on hover */
+    color: white; /* Change text color for better contrast */
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #0056b3; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+/* Mission & Vision Goals Styles */
+.mission-vision-goals {
+    margin: 20px; /* Add margin around the section */
+    text-align: center; /* Center text for headings */
+}
+
+/* Mission and Vision Container Styles */
+.mission-vision-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Card Styles for Mission and Vision */
+.mission-card, .vision-card {
+    background-color: whitesmoke; /* Background color for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    width: 500px; /* Set a fixed width for each card */
+    margin: 10px; /* Margin around each card for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    text-align: center; /* Center text */
+}
+
+/* Goals and Core Values Container Styles */
+.goals-core-values-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Card Styles for Goals and Core Values */
+.goals-card, .core-values-card {
+    background-color: #f4f4f4; /* Background color for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    width: 500px; /* Set a fixed width for each card */
+    margin: 10px; /* Margin around each card for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center text */
+}
+
+/* Hover Effect */
+.mission-card:hover,
+.vision-card:hover,
+.goals-card:hover,
+.core-values-card:hover {
+    background-color: goldenrod; /* Change background to Golden Rod on hover */
+    color: white; /* Change text color for better contrast */
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #0056b3; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+/* Customer Testimonials Styles */
+.customer-testimonials {
+    text-align: center; /* Center align text */
+    margin: 20px; /* Add margin around the section */
+}
+
+.testimonial-carousel {
+    display: flex; /* Use flexbox for layout */
+    overflow: hidden; /* Hide overflow to create sliding effect */
+    position: relative; /* Position relative for the buttons */
+    width: 100%; /* Full width */
+}
+
+.testimonial {
+    min-width: 100%; /* Each testimonial takes the full width */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+    text-align: center; /* Center text */
+}
+
+.testimonial-image {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Cover the container */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.customer-name {
+    font-weight: bold; /* Make customer name bold */
+}
+
+/* Button Styles */
+.prev, .next {
+    position: absolute; /* Position buttons */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+   
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Rounded buttons */
+    cursor: pointer; /* Change cursor on hover */
+    padding: 10px; /* Padding */
+    font-size: 18px; /* Font size */
+    z-index: 10; /* Bring buttons above the carousel */
+    
+}
+
+.prev {
+    left: 10px; /* Position left */
+}
+
+.next {
+    right: 10px; /* Position right */
+}
+
+h2{
+    text-align: center;
+}
+
+/* Blog Styles */
+.latest-articles {
+    margin: 20px; /* Add margin around the section */
+}
+
+.articles-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center articles */
+}
+
+.article-card {
+    background-color: #f4f4f4; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    width: 300px; /* Set a fixed width for each card */
+    margin: 10px; /* Space between cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.article-image {
+    width: 100%; /* Full width for images */
+    height: 200px; /* Fixed height for images */
+    border-radius: 8px; /* Match card rounded corners */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+
+/* Contact Info Styles */
+.contact-info {
+    text-align: center; /* Center align text */
+    margin: 20px; /* Add margin around the section */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #f4f4f4; /* Background color for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    margin: 20px auto; /* Center the form with margin */
+    width: 80%; /* Set width of the form */
+    max-width: 600px; /* Max width for larger screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.contact-form h2 {
+    text-align: center; /* Center align heading */
+}
+
+.contact-form label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input and textarea */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below inputs */
+    font-size: 16px; /* Font size */
+}
+
+.contact-form button {
+    background-color: #0056b3; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Button font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    width: 100%; /* Full width button */
+}
+
+.contact-form button:hover {
+    background-color: #003d82; /* Darker background on hover */
+}
+
+/* FAQs Styles */
+.faqs {
+    margin: 20px; /* Add margin around the section */
+    text-align: center; /* Center align text */
+}
+
+.faqs-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center FAQs */
+}
+
+.faq {
+    background-color: #f4f4f4; /* Background color for FAQs */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside FAQ cards */
+    width: 45%; /* Set width of each FAQ card */
+    margin: 10px; /* Space between cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: left; /* Align text to the left */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.faq:hover {
+    background-color: goldenrod; /* Change background to Golden Rod on hover */
+    color: white; /* Change text color for better contrast */
+}
+
+.icon {
+    font-size: 24px; /* Adjust icon size */
+    color: blue; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon vertically with text */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for Responsive Design */
+
+/* Tablets (Landscape) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h2 {
+        font-size: 36px; /* Reduce size for smaller screens */
+    }
+
+    .hero-text .btn {
+        padding: 10px 20px; /* Adjust button size */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 products per row on tablets */
+    }
+
+    .product-filters {
+        max-width: 80%; /* Adjust width on tablets */
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 28px; /* Further reduce size for mobile */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row on phones */
+    }
+
+    .product-filters {
+        max-width: 95%; /* Max width for mobile */
+    }
+
+    form {
+        flex-direction: column; /* Stack form elements */
+    }
+
+    button {
+        padding: 10px; /* Adjust button size for mobile */
+    }
+}

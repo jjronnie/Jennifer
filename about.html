@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Health Supplements Uganda.">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="script.js" defer></script> <!-- Link to the external script -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Health Supplements UGANDA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="page-banner">
+        <h1 id="page-title">Default Title</h1>
+    </section>
+    
+
+    <section class="about-container">
+        <div class="about-card">
+            <i class="fas fa-info-circle icon"></i> <!-- About icon -->
+            <h2>About Health Supplements Uganda</h2>
+            <p>Health Supplements Uganda is dedicated to enhancing the health and well-being of elderly individuals facing various health challenges.</p>
+        </div>
+    
+        <div class="about-card">
+            <i class="fas fa-book-open icon"></i> <!-- Our Story icon -->
+            <h2>Our Story</h2>
+            <p>Founded in 2023, Health Supplements Uganda emerged from a deep commitment to improving the lives of the elderly population in our communities. Our founders, inspired by personal experiences with aging family members, recognized the critical gap in access to quality nutritional support for seniors.</p>
+            <p>We began by researching the specific health challenges faced by the elderly in Uganda, such as weakened immune systems, bone health issues, and digestive concerns. Collaborating with healthcare professionals and nutritionists, we developed a range of products designed to address these needs effectively.</p>
+        </div>
+    
+        <div class="about-card">
+            <i class="fas fa-exclamation-triangle icon"></i> <!-- Problem Statement icon -->
+            <h2>Problem Statement</h2>
+            <p>In Uganda, many elderly individuals face significant health challenges that are exacerbated by nutritional deficiencies and a lack of access to appropriate dietary supplements. Common issues such as weakened immune systems, chronic illnesses, and decreased mobility hinder their quality of life. Despite the increasing awareness of the importance of nutrition in managing these conditions, many seniors struggle to obtain the essential nutrients they need. Health Supplements Uganda aims to address these challenges by offering tailored nutritional solutions that support the health and vitality of the elderly population.</p>
+        </div>
+    </section>
+    
+
+    <section class="mission-vision-goals">
+        <h2>Mission & Vision</h2>
+        <div class="mission-vision-container">
+            <div class="mission-card">
+                <i class="fas fa-bullseye icon"></i> <!-- Mission icon -->
+                <h3>Mission</h3>
+                <p>To improve the quality of life for elderly individuals in Uganda by offering effective, safe, and affordable food supplements that address their unique health needs and promote overall wellness.</p>
+            </div>
+    
+            <div class="vision-card">
+                <i class="fas fa-eye icon"></i> <!-- Vision icon -->
+                <h3>Vision</h3>
+                <p>To be the leading provider of nutritional supplements in Uganda recognized for our commitment to quality, community engagement, and the health of our elderly population.</p>
+            </div>
+        </div>
+    
+        <div class="goals-core-values-container">
+            <div class="goals-card">
+                <h3>Goals</h3>
+                <ul>
+                    <li>Accessibility: Make our supplements readily available and affordable to elderly individuals across Uganda.</li>
+                    <li>Education: Provide valuable resources and information on nutrition and health, empowering seniors to make informed choices.</li>
+                    <li>Quality Assurance: Continuously enhance our products based on the latest research and feedback from our customers.</li>
+                    <li>Community Partnerships: Collaborate with healthcare providers and community organizations to promote awareness and access to nutritional support.</li>
+                </ul>
+            </div>
+    
+            <div class="core-values-card">
+                <h3>Core Values</h3>
+                <ul>
+                    <li>Integrity: We uphold honesty and transparency in all our business practices, ensuring the highest quality in our products.</li>
+                    <li>Compassion: We prioritize the health and well-being of our customers, striving to meet their unique needs with empathy.</li>
+                    <li>Innovation: We are committed to staying at the forefront of nutritional science, regularly updating our offerings based on new research.</li>
+                    <li>Community Engagement: We actively support and engage with local communities, focusing on the health needs of elderly individuals.</li>
+                    <li>Sustainability: We practice environmentally friendly sourcing and packaging to ensure a positive impact on our community and the planet.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="customer-testimonials">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <img src="img/test1.jpg" alt="Jane" class="testimonial-image"> <!-- Circular image -->
+                <p>"Health Supplements Uganda has made a significant difference in my mother’s health. She feels more energetic and active!"</p>
+                <p class="customer-name">— Jane, Kampala</p>
+            </div>
+            <div class="testimonial">
+                <img src="img/test3.jpg" alt="Peter" class="testimonial-image"> <!-- Circular image -->
+                <p>"I appreciate the quality and effectiveness of these supplements. They have truly improved my well-being."</p>
+                <p class="customer-name">— Peter, Jinja</p>
+            </div>
+            <div class="testimonial">
+                <img src="img/text2.jpg" alt="Sarah" class="testimonial-image"> <!-- Circular image -->
+                <p>"I've tried many supplements, but Health Supplements Uganda is by far the best. Highly recommend!"</p>
+                <p class="customer-name">— JORUM, Entebbe</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+    
+    <script>
+        let currentSlide = 0; // Start with the first slide
+        const slides = document.querySelectorAll('.testimonial'); // Get all testimonials
+        const totalSlides = slides.length; // Total number of testimonials
+    
+        function changeSlide(direction) {
+            currentSlide += direction;
+    
+            // Loop back to the start or end
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+    
+            // Update the transform property to slide
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+            });
+        }
+    
+        // Function to auto-slide
+        function autoSlide() {
+            changeSlide(1); // Move to the next slide
+        }
+    
+        // Set interval for automatic sliding (e.g., every 5 seconds)
+        setInterval(autoSlide, 5000); // Change slide every 5 seconds
+    </script>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@healthsupplements.com">support@healthsupplements.com</a></p>
+                <p>Phone: <a href="tel:0773987654">0773987654</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2024 Health Supplements UGANDA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

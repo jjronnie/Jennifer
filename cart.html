@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your shopping cart at Health Supplements Uganda.">
+    <title>Cart - Health Supplements Uganda</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Health Supplements UGANDA</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="shop.html">Shop Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shopping-cart">
+        <h2>Your Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Omega-3 Fish Oil Capsules</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$24.99</td>
+                    <td>$24.99</td>
+                    <td><button>Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Magnesium Tablets</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$19.99</td>
+                    <td>$19.99</td>
+                    <td><button>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <h3>Subtotal: $44.98</h3>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <section class="checkout">
+        <h2>Checkout</h2>
+        <form>
+            <h3>Billing Information</h3>
+            <label for="billing-name">Name:</label>
+            <input type="text" id="billing-name" required>
+
+            <label for="billing-email">Email:</label>
+            <input type="email" id="billing-email" required>
+
+            <label for="billing-address">Address:</label>
+            <input type="text" id="billing-address" required>
+
+            <label for="billing-phone">Phone:</label>
+            <input type="tel" id="billing-phone" required>
+
+            <h3>Shipping Information</h3>
+            <label for="shipping-address">Shipping Address:</label>
+            <input type="text" id="shipping-address" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@healthsupplements.com">support@healthsupplements.com</a></p>
+                <p>Phone: <a href="tel:0773987654">0773987654</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2024 Health Supplements UGANDA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
