@@ -153,8 +153,8 @@ nav ul li a:hover::after {
 /* Main Sections */
 section {
     padding: 50px 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
+    
+    
 }
 
 /* Featured Products */
@@ -257,7 +257,7 @@ footer p {
 }
 
 .product {
-    background-color: wheat;
+    background-color: whitesmoke;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
