@@ -1091,6 +1091,65 @@ h2{
     }
 }
 
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .newsletter {
+        width: 100%; /* Slightly increase width for tablets */
+        padding: 30px 15px; /* Adjust padding */
+        border-radius: 0;
+    }
+
+    .newsletter h2 {
+        font-size: 24px; /* Slightly smaller heading */
+    }
+
+    .newsletter form {
+        display: flex; /* Keep input and button on the same line */
+        justify-content: center; /* Center the form elements */
+        gap: 10px; /* Space between input and button */
+    }
+
+    .newsletter input[type="email"] {
+        width: 60%; /* Reduce width of the input field */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .newsletter button {
+        font-size: 14px; /* Slightly smaller button text */
+        padding: 10px 12px; /* Adjust padding for the button */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .newsletter {
+        max-width: 100%; /* Full width for phones */
+        padding: 20px 10px; /* Reduce padding */
+    }
+
+    .newsletter h2 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .newsletter form {
+        display: flex; /* Keep input and button on the same line */
+        flex-direction: row; /* Ensure they stay in a row */
+        justify-content: center; /* Center the form elements */
+        gap: 10px; /* Space between input and button */
+    }
+
+    .newsletter input[type="email"] {
+        width: 55%; /* Further reduce width for phones */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .newsletter button {
+        font-size: 14px; /* Smaller button font size */
+        padding: 10px 12px; /* Adjust padding for the button */
+    }
+}
+
+
 
 
 
