@@ -855,10 +855,7 @@ h2{
     vertical-align: middle; /* Align icon vertically with text */
 }
 
-
-/* Media Queries for Tablets and Phones */
-
-/* Tablets (768px and below) */
+/* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
     .product-details {
         flex-direction: column; /* Stack image and product info vertically */
@@ -882,15 +879,15 @@ h2{
     .product-specifications {
         width: 90%; /* Use more width on smaller screens */
     }
-    nav{
+    nav {
         display: none;
     }
-
 
     .logo h1 {
         font-size: 18px;
         color: #0056b3;
     }
+
     /* Logo Image Styling */
     .logo {
         display: flex; /* Use flexbox to align the image and text */
@@ -902,46 +899,7 @@ h2{
         height: auto; /* Maintain aspect ratio */
         margin-right: 10px; /* Space between the logo and the heading */
     }
-   
-}
 
-/* Phones (480px and below) */
-@media (max-width: 480px) {
-    .product-details {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center;
-        width: 100%; /* Full width */
-    }
-
-    .product-image img {
-        max-width: 100%; /* Full width for image */
-        margin-bottom: 20px; /* Space below image */
-    }
-
-    .product-info {
-        padding: 5px; /* Reduce padding on smaller screens */
-        text-align: center; /* Center align text for smaller screens */
-    }
-
-    .product-info h2 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
-
-    .product-info .product-price {
-        font-size: 1.2rem; /* Adjust price size */
-    }
-
-    .product-specifications {
-        width: 100%; /* Full width for specifications */
-    }
-
-    .product-specifications ul li {
-        padding: 8px; /* Reduce padding */
-    }
-}
-
-/* Media Query for Tablets (768px and below) */
-@media (max-width: 768px) {
     .hero-text {
         text-align: center; /* Center the text */
         padding-left: 0; /* Remove left padding */
@@ -959,7 +917,7 @@ h2{
         margin-bottom: 15px; /* Add more space below button */
     }
 
-    .hero-banner{
+    .hero-banner {
         height: 300px;
     }
 
@@ -993,10 +951,108 @@ h2{
     .search-bar button:hover {
         background-color: goldenrod; /* Button hover color */
     }
+
+    .featured-products .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 product per row for tablets */
+    }
+
+    .product {
+        padding: 15px; /* Slightly smaller padding on tablets */
+    }
+
+    .featured-products h2 {
+        font-size: 22px; /* Reduce font size of the heading */
+    }
+
+    .featured-products h3 {
+        font-size: 16px; /* Smaller font size for the heading */
+        text-transform: uppercase;
+    }
+
+    .featured-products p {
+        font-size: 12px; /* Smaller font size for the heading */
+    }
+
+    .featured-products button {
+        font-size: 12px; /* Smaller font size for the heading */
+    }
+
+    .newsletter {
+        width: 100%; /* Slightly increase width for tablets */
+        padding: 30px 15px; /* Adjust padding */
+        border-radius: 0;
+    }
+
+    .newsletter h2 {
+        font-size: 24px; /* Slightly smaller heading */
+    }
+
+    .newsletter form {
+        display: flex; /* Keep input and button on the same line */
+        justify-content: center; /* Center the form elements */
+        gap: 10px; /* Space between input and button */
+    }
+
+    .newsletter input[type="email"] {
+        width: 60%; /* Reduce width of the input field */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .newsletter button {
+        font-size: 14px; /* Slightly smaller button text */
+        padding: 10px 12px; /* Adjust padding for the button */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center align content */
+    }
+
+    .footer-links, .footer-contact, .footer-social {
+        width: 100%; /* Full width for each section */
+        text-align: center; /* Center align text in each section */
+        margin-bottom: 20px; /* Add space between each section */
+    }
+
+    .footer-social a {
+        margin: 5px; /* Reduce space between social icons */
+    }
 }
 
 /* Media Query for Phones (480px and below) */
 @media (max-width: 480px) {
+    .product-details {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        width: 100%; /* Full width */
+    }
+
+    .product-image img {
+        max-width: 100%; /* Full width for image */
+        margin-bottom: 20px; /* Space below image */
+    }
+
+    .product-info {
+        padding: 5px; /* Reduce padding on smaller screens */
+        text-align: center; /* Center align text for smaller screens */
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .product-info .product-price {
+        font-size: 1.2rem; /* Adjust price size */
+    }
+
+    .product-specifications {
+        width: 100%; /* Full width for specifications */
+    }
+
+    .product-specifications ul li {
+        padding: 8px; /* Reduce padding */
+    }
+
     .hero-text {
         text-align: center; /* Center text */
         padding: 10px; /* Smaller padding */
@@ -1042,38 +1098,7 @@ h2{
     .search-bar button:hover {
         background-color: goldenrod; /* Button hover color */
     }
-}
 
-
-/* Media Query for Tablets (768px and below) */
-@media (max-width: 768px) {
-    .featured-products .product-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 product per row for tablets */
-    }
-
-    .product {
-        padding: 15px; /* Slightly smaller padding on tablets */
-    }
-
-    .featured-products h2 {
-        font-size: 22px; /* Reduce font size of the heading */
-    }
-    .featured-products h3 {
-        font-size: 16px; /* Smaller font size for the heading */
-        text-transform: uppercase;
-    }
-    .featured-products p {
-        font-size: 12px; /* Smaller font size for the heading */
-        
-    }
-    .featured-products button {
-        font-size: 12px; /* Smaller font size for the heading */
-        
-    }
-}
-
-/* Media Query for Phones (480px and below) */
-@media (max-width: 480px) {
     .featured-products .product-grid {
         grid-template-columns: repeat(1, 1fr); /* 1 product per row for phones */
     }
@@ -1085,43 +1110,12 @@ h2{
     .featured-products h2 {
         font-size: 22px; /* Smaller font size for the heading */
     }
+
     .featured-products h3 {
         font-size: 14px; /* Smaller font size for the heading */
         text-transform: uppercase;
     }
-}
 
-/* Media Query for Tablets (768px and below) */
-@media (max-width: 768px) {
-    .newsletter {
-        width: 100%; /* Slightly increase width for tablets */
-        padding: 30px 15px; /* Adjust padding */
-        border-radius: 0;
-    }
-
-    .newsletter h2 {
-        font-size: 24px; /* Slightly smaller heading */
-    }
-
-    .newsletter form {
-        display: flex; /* Keep input and button on the same line */
-        justify-content: center; /* Center the form elements */
-        gap: 10px; /* Space between input and button */
-    }
-
-    .newsletter input[type="email"] {
-        width: 60%; /* Reduce width of the input field */
-        font-size: 14px; /* Slightly smaller font size */
-    }
-
-    .newsletter button {
-        font-size: 14px; /* Slightly smaller button text */
-        padding: 10px 12px; /* Adjust padding for the button */
-    }
-}
-
-/* Media Query for Phones (480px and below) */
-@media (max-width: 480px) {
     .newsletter {
         max-width: 100%; /* Full width for phones */
         padding: 20px 10px; /* Reduce padding */
@@ -1147,12 +1141,28 @@ h2{
         font-size: 14px; /* Smaller button font size */
         padding: 10px 12px; /* Adjust padding for the button */
     }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center align content */
+        padding: 20px 10px; /* Adjust padding */
+    }
+
+    .footer-links, .footer-contact, .footer-social {
+        width: 100%; /* Full width for each section */
+        text-align: center; /* Center align text */
+        margin-bottom: 15px; /* Reduce space between sections */
+    }
+
+    .footer-social a {
+        margin: 5px; /* Reduce space between social icons */
+        font-size: 20px; /* Slightly smaller icons for phones */
+    }
+
+    footer {
+        padding: 30px 10px; /* Adjust padding for smaller devices */
+    }
 }
-
-
-
-
-
 
 
 
