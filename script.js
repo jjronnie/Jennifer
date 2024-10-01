@@ -65,3 +65,14 @@ navLinks.forEach(link => {
     }
 });
 
+
+
+// Get the toggle button and mobile navigation
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+// Add a click event to toggle the mobile navigation
+mobileNavToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('active'); // Toggle the 'active' class on mobile nav
+});
+

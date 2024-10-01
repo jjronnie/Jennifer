@@ -899,7 +899,7 @@ h2{
     }
 
     .logo h1 {
-        font-size: 18px;
+        font-size: 14px;
         color: #0056b3;
     }
 
@@ -1267,6 +1267,47 @@ h2{
     }
 }
 
+
+/* Hide the mobile-nav by default */
+.mobile-nav {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position for mobile nav */
+    top: 0;
+    right: 0;
+    width: 200px; /* Set the width of the mobile nav */
+    height: 100%; /* Full height */
+    background-color: #0056b3; /* Background color */
+    padding: 20px; /* Padding inside the nav */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Make mobile nav visible when toggled */
+.mobile-nav.active {
+    display: block; /* Show mobile nav when active */
+}
+
+/* Span for toggling the mobile nav */
+.mobile-nav-toggle {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays above everything else */
+    color: black;
+}
+
+/* Media Query for Small Devices (768px and below) */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide the regular nav */
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show the toggle span on small devices */
+    }
+}
 
 
 
