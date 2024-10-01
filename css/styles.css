@@ -96,6 +96,9 @@ nav ul li a.active::after {
     transition: width 0.3s ease; /* Smooth transition on hover */
 }
 
+.mobile-nav{
+    display: none;
+}
 
 
 
@@ -876,6 +879,26 @@ h2{
     .product-specifications {
         width: 90%; /* Use more width on smaller screens */
     }
+    nav{
+        display: none;
+    }
+
+
+    .logo h1 {
+        font-size: 18px;
+        color: #0056b3;
+    }
+    /* Logo Image Styling */
+    .logo {
+        display: flex; /* Use flexbox to align the image and text */
+        align-items: center; /* Vertically align the image with the heading */
+    }
+    
+    .logo-image {
+        width: 50px; /* Set width of the logo image */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between the logo and the heading */
+    }
    
 }
 
@@ -913,6 +936,112 @@ h2{
         padding: 8px; /* Reduce padding */
     }
 }
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .hero-text {
+        text-align: center; /* Center the text */
+        padding-left: 0; /* Remove left padding */
+        padding: 20px; /* Add padding around for spacing */
+    }
+
+    .hero-text h2 {
+        font-size: 36px; /* Smaller heading size */
+        margin-bottom: 30px; /* Less space below heading */
+    }
+
+    .hero-text .btn {
+        font-size: 16px; /* Smaller button text */
+        padding: 10px 20px; /* Smaller button padding */
+        margin-bottom: 15px; /* Add more space below button */
+    }
+
+    .hero-banner{
+        height: 300px;
+    }
+
+    /* Keep the search bar inline for tablets, reduce width */
+    .search-bar {
+        display: flex; /* Keep inline with flexbox */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center the whole bar horizontally */
+        margin-top: 10px; /* Space above search bar */
+    }
+
+    .search-bar input {
+        width: 70%; /* Reduced width of input */
+        padding: 10px; /* Padding inside input */
+        border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+    }
+
+    .search-bar button {
+        padding: 10px 15px; /* Padding for button */
+        border: 1px solid #0056b3; /* Border for button */
+        background-color: #0056b3; /* Button background color */
+        color: white; /* Button text color */
+        border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+        cursor: pointer;
+    }
+
+    .search-bar button i {
+        margin: 0; /* Ensure icon is centered */
+    }
+
+    .search-bar button:hover {
+        background-color: goldenrod; /* Button hover color */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .hero-text {
+        text-align: center; /* Center text */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .hero-text h2 {
+        font-size: 28px; /* Smaller heading size for phones */
+        margin-bottom: 20px; /* Reduce space below heading */
+    }
+
+    .hero-text .btn {
+        font-size: 14px; /* Smaller button text */
+        padding: 8px 15px; /* Adjust padding for smaller button */
+    }
+
+    /* Keep the search bar inline on phones as well */
+    .search-bar {
+        display: flex; /* Keep input and button on the same line */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center the whole bar horizontally */
+        margin-top: 10px; /* Space above search bar */
+    }
+
+    .search-bar input {
+        width: 65%; /* Further reduce the width for phones */
+        padding: 8px; /* Adjust padding for input */
+        border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+    }
+
+    .search-bar button {
+        padding: 8px 15px; /* Adjust padding for button */
+        border: 1px solid #0056b3; /* Button border */
+        background-color: #0056b3; /* Button background color */
+        color: white; /* Button text color */
+        border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+        cursor: pointer;
+    }
+
+    .search-bar button i {
+        margin: 0; /* Ensure icon is centered */
+    }
+
+    .search-bar button:hover {
+        background-color: goldenrod; /* Button hover color */
+    }
+}
+
+
 
 
 
