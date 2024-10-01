@@ -192,6 +192,10 @@ section {
     text-align: center;
     font-size: 30px;
 }
+.featured-products h3{
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .product {
     background-color: whitesmoke;
@@ -508,7 +512,6 @@ footer p {
 /* Footer Styles */
 footer {
     background-color: #f4f4f4; /* Background color for footer */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../img/footer-bg.png");
     padding: 40px 20px; /* Padding around footer */
     text-align: center; /* Center align text */
     margin-top: 20px;
@@ -1045,7 +1048,7 @@ h2{
 /* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
     .featured-products .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row for tablets */
+        grid-template-columns: repeat(1, 1fr); /* 1 product per row for tablets */
     }
 
     .product {
@@ -1053,14 +1056,26 @@ h2{
     }
 
     .featured-products h2 {
-        font-size: 26px; /* Reduce font size of the heading */
+        font-size: 22px; /* Reduce font size of the heading */
+    }
+    .featured-products h3 {
+        font-size: 16px; /* Smaller font size for the heading */
+        text-transform: uppercase;
+    }
+    .featured-products p {
+        font-size: 12px; /* Smaller font size for the heading */
+        
+    }
+    .featured-products button {
+        font-size: 12px; /* Smaller font size for the heading */
+        
     }
 }
 
 /* Media Query for Phones (480px and below) */
 @media (max-width: 480px) {
     .featured-products .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row for phones */
+        grid-template-columns: repeat(1, 1fr); /* 1 product per row for phones */
     }
 
     .product {
@@ -1068,9 +1083,14 @@ h2{
     }
 
     .featured-products h2 {
-        font-size: 24px; /* Smaller font size for the heading */
+        font-size: 22px; /* Smaller font size for the heading */
+    }
+    .featured-products h3 {
+        font-size: 14px; /* Smaller font size for the heading */
+        text-transform: uppercase;
     }
 }
+
 
 
 
