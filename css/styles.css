@@ -576,10 +576,25 @@ footer {
 
 .page-banner h1 {
     font-size: 48px; /* Font size for the heading */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for text */
     padding: 20px; /* Padding around text */
     border-radius: 8px; /* Optional: rounded corners */
+    color: white; /* Text color */
+    font-weight: bolder; /* Bold text */
+    position: relative; /* Required for the pseudo-element */
 }
+
+/* Add bold underline using the pseudo-element */
+.page-banner h1::after {
+    content: ''; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    height: 4px; /* Thickness of the underline */
+    width: 100%; /* Full width of the heading */
+    background-color: white; /* Color of the underline */
+    position: absolute; /* Position it relative to the h1 */
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position it below the text */
+}
+
 
 /* About Container Styles */
 .about-container {
@@ -1169,6 +1184,92 @@ h2{
         padding: 30px 10px; /* Adjust padding for smaller devices */
     }
 }
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .about-card {
+        width: 90%; /* Set card width to 90% */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Adjustments for Mission & Vision Goals */
+    .mission-vision-container,
+    .goals-core-values-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .mission-card,
+    .vision-card,
+    .goals-card,
+    .core-values-card {
+        width: 90%; /* Set width to 90% for cards */
+        margin: 10px 0; /* Margin above and below cards */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .about-card {
+        width: 90%; /* Set card width to 90% */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    /* Adjustments for Mission & Vision Goals */
+    .mission-vision-container,
+    .goals-core-values-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .mission-card,
+    .vision-card,
+    .goals-card,
+    .core-values-card {
+        width: 90%; /* Set width to 90% for cards */
+        margin: 10px 0; /* Margin above and below cards */
+    }
+}
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .faqs-container {
+        flex-direction: column; /* Stack FAQ cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .faq {
+        width: 90%; /* Set card width to 90% */
+        margin: 10px 0; /* Space between cards */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .faqs-container {
+        flex-direction: column; /* Stack FAQ cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .faq {
+        width: 90%; /* Set card width to 90% */
+        margin: 10px 0; /* Space between cards */
+    }
+}
+
+
+
+
 
 
 
