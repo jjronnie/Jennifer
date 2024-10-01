@@ -1017,6 +1017,12 @@ h2{
     .footer-social a {
         margin: 5px; /* Reduce space between social icons */
     }
+    .page-banner{
+        height: 300px;
+    }
+    .page-banner h1{
+        font-size: 26px;
+    }
 }
 
 /* Media Query for Phones (480px and below) */
