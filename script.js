@@ -67,12 +67,29 @@ navLinks.forEach(link => {
 
 
 
+
+
 // Get the toggle button and mobile navigation
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 
-// Add a click event to toggle the mobile navigation
+// Function to handle mobile nav toggle
 mobileNavToggle.addEventListener('click', () => {
-    mobileNav.classList.toggle('active'); // Toggle the 'active' class on mobile nav
+    if (mobileNav.classList.contains('active')) {
+        // Remove the active class to trigger slide out
+        mobileNav.classList.remove('active');
+
+        // Listen for the animation end event to hide the nav
+        mobileNav.addEventListener('transitionend', () => {
+            mobileNav.style.display = 'none'; // Hide it after animation ends
+        }, { once: true }); // Ensure it only runs once
+    } else {
+        mobileNav.style.display = 'block'; // Show the nav before adding the active class
+        // Allow the display to take effect before transitioning
+        setTimeout(() => {
+            mobileNav.classList.add('active'); // Add active class to trigger slide in
+        }, 10); // Short delay to allow the display block to take effect
+    }
 });
+
 

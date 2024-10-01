@@ -9,6 +9,8 @@
     <link rel="icon" href="img/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script> <!-- Link to the external script -->
+    <script src="script.js" defer></script> <!-- Include your JS file -->
+
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -31,22 +33,41 @@
             </ul>
         </nav>
 
-       <!-- Mobile Navigation -->
-       <span class="mobile-nav-toggle">&#9776;</span> <!-- This is the "hamburger" icon -->
-<div class="mobile-nav">
-    
+      <!-- Hamburger Icon for Mobile Nav Toggle -->
+<span class="mobile-nav-toggle">&#9776;</span> <!-- The hamburger icon -->
 
-    
+<!-- Mobile Navigation (Initially hidden) -->
+<div class="mobile-nav">
     <ul>
         <li><a href="index.html">Home</a></li>
+        <div class="line"></div>
         <li><a href="products.html">Products</a></li>
+        <div class="line"></div>
         <li><a href="about.html">About Us</a></li>
+        <div class="line"></div>
         <li><a href="blog.html">Blog</a></li>
+        <div class="line"></div>
         <li><a href="contact.html">Contact</a></li>
+        <div class="line"></div>
         <li><a href="faqs.html">FAQs</a></li>
+        <div class="line"></div>
         <li><a href="shop.html">Shop Now</a></li>
+        <div class="line"></div>
     </ul>
 </div>
+<script>
+
+    // Select the toggle button and mobile nav
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+// Toggle mobile nav visibility when hamburger icon is clicked
+mobileNavToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+});
+
+</script>
+
 
 
 

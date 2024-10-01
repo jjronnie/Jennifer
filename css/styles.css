@@ -96,9 +96,112 @@ nav ul li a.active::after {
     transition: width 0.3s ease; /* Smooth transition on hover */
 }
 
-.mobile-nav{
-    display: none;
+
+/* Keyframes for sliding in animation */
+@keyframes slideIn {
+    from {
+        right: -250px; /* Start off-screen */
+    }
+    to {
+        right: 0; /* End at the visible position */
+    }
 }
+
+/* Keyframes for sliding out animation */
+@keyframes slideOut {
+    from {
+        right: 0; /* Start at visible position */
+    }
+    to {
+        right: -250px; /* End off-screen */
+    }
+}
+
+.line{
+    border: 1px solid;
+    color: white;
+    width: 90%;
+  }
+  
+
+/* Initially hide the mobile-nav off-screen */
+.mobile-nav {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    width: 250px; /* Mobile nav width */
+    height: 100%; /* Full height */
+    background-color: #0056b3; /* Background color */
+    padding: 20px; /* Padding inside the nav */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: right 0.3s ease; /* Smooth transition for sliding */
+}
+
+/* Show mobile nav when the 'active' class is added */
+.mobile-nav.active {
+    display: block; /* Show mobile nav when active */
+    right: 0; /* Bring the mobile nav into view */
+}
+
+/* When not active, set it back to the hidden state */
+.mobile-nav:not(.active) {
+    right: -250px; /* Slide out to the right */
+}
+
+
+/* Hamburger icon */
+.mobile-nav-toggle {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000; /* Keep it on top */
+    color: black;
+    font-weight: bolder;
+}
+
+.mobile-nav ul li {
+    margin: 10px 0; /* Add vertical margin between each list item */
+}
+
+.mobile-nav ul li a {
+    color: white; /* Link color */
+    padding: 10px; /* Padding around the link */
+    text-decoration: none; /* Remove default underline */
+    
+    font-size: 20px;
+}
+.mobile-nav ul li a:hover{
+   color: goldenrod;
+}
+
+/* Add an underline effect using a pseudo-element */
+.mobile-nav ul li a::after {
+    content: ''; /* Empty content for the underline */
+    display: block; /* Make it a block element */
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    width: 100%; /* Full width of the link */
+    position: absolute; /* Position it relative to the link */
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position it below the text */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Change underline color on hover */
+.mobile-nav ul li a:hover::after {
+    transform: scaleX(1); /* Ensure it scales on hover */
+}
+
+/* To add spacing between links */
+.mobile-nav ul {
+    padding: 0; /* Remove padding from the ul */
+    list-style-type: none; /* Remove bullet points */
+}
+
 
 
 
@@ -1268,47 +1371,31 @@ h2{
 }
 
 
-/* Hide the mobile-nav by default */
-.mobile-nav {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed position for mobile nav */
-    top: 0;
-    right: 0;
-    width: 200px; /* Set the width of the mobile nav */
-    height: 100%; /* Full height */
-    background-color: #0056b3; /* Background color */
-    padding: 20px; /* Padding inside the nav */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-}
 
-/* Make mobile nav visible when toggled */
-.mobile-nav.active {
-    display: block; /* Show mobile nav when active */
-}
-
-/* Span for toggling the mobile nav */
-.mobile-nav-toggle {
-    display: none; /* Hide by default */
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1000; /* Ensure it stays above everything else */
-    color: black;
-}
-
-/* Media Query for Small Devices (768px and below) */
+/* Media query to show the mobile nav on smaller screens */
 @media (max-width: 768px) {
     nav {
-        display: none; /* Hide the regular nav */
+        display: none; /* Hide the regular desktop nav */
     }
 
     .mobile-nav-toggle {
-        display: block; /* Show the toggle span on small devices */
+        display: block; /* Show hamburger icon */
     }
 }
 
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .article-card {
+        width: 90%; /* Set width to 90% for cards on smaller screens */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .article-card {
+        width: 90%; /* Set width to 90% for cards on smaller screens */
+    }
+}
 
 
 
