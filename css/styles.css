@@ -1042,6 +1042,37 @@ h2{
 }
 
 
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .featured-products .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row for tablets */
+    }
+
+    .product {
+        padding: 15px; /* Slightly smaller padding on tablets */
+    }
+
+    .featured-products h2 {
+        font-size: 26px; /* Reduce font size of the heading */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .featured-products .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row for phones */
+    }
+
+    .product {
+        padding: 10px; /* Smaller padding for phones */
+    }
+
+    .featured-products h2 {
+        font-size: 24px; /* Smaller font size for the heading */
+    }
+}
+
+
 
 
 
